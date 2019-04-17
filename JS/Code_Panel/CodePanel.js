@@ -100,7 +100,7 @@ class CodePanel extends Component {
         input.style.position = 'fixed';
         input.style.left = (input_x+this.x - 40) + 'px';
         input.style.top = (input_y+this.y+this.height - 20) + 'px';
-        input.value=str;
+        input.value=checkIfItIsMpisCode(str);
         let self=this;
         let index=this.line_index+i;
         input.onkeydown=function(e){
@@ -130,6 +130,10 @@ class CodePanel extends Component {
            this.content[i].setContent(this.instructions[this.line_index+i]);
            this.content[i].update();
         }
+    }
+
+    checkIfItIsMpisCode(str) {
+        //Please add instructions to check if string str will be Mips Code
     }
 
     
